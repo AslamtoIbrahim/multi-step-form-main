@@ -21,13 +21,18 @@
   /* image backgroud */
   --background-image-mobile: url('./assets/bg-sidebar-mobile.svg');
   --background-image-desktop: url('./assets/bg-sidebar-desktop.svg');
+  --background-image-check: url('./assets/icon-checkmark.svg');
 
   /* font family */
   --font-ubun: 'Ubuntu', sans-serif;
+
+  /* break points */
+  --breakpoint-xsm:425px;
+  --breakpoint-xxsm:375px;
 }
 
 
 .tst{
   font-family: 'Ubuntu', sans-serif;
-  background-image: url('./assets/bg-sidebar-desktop.svg');
+  background-image: url('./assets/icon-checkmark.svg');
 }
