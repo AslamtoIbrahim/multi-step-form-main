@@ -10,17 +10,17 @@ const PhoneInput = ({value}: Inputs) => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col md:space-y-1">
       <div className="flex justify-between items-center">
-        <label htmlFor="input">Phone Number</label>
+        <label htmlFor="phone">Phone Number</label>
         {isNotValid && <p className="text-red-500 text-sm">Must be 7 digit numbers and more</p>}
       </div>
       <input
-        className={`border border-gray-300 text-sm font-semibold rounded-sm px-3 py-2
+        className={`border border-gray-300 text-sm md:text-base font-semibold rounded-sm px-3 py-2
           outline-none focus:border-purple-600
-            ${isNotValid ? 'bg-red-200 text-grey-500' : 'text-gray-400'}`}
-        type="text"
-        id="input"
+            ${isNotValid ? 'bg-red-200 placeholder:text-grey-500' : 'placeholder:text-gray-400'}`}
+        type="number"
+        id="phone"
         value={inputValue}
         placeholder="e.g. +1 234 567 890"
         onChange={onChangeHandler}

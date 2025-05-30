@@ -1,10 +1,8 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
-
- 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 
 @theme {
-      /* Primary */
+  /* Primary */
   --color-blue-950: hsl(213, 96%, 18%);
   --color-purple-600: hsl(243, 100%, 62%);
   --color-blue-300: hsl(228, 100%, 84%);
@@ -19,20 +17,19 @@
   --color-white: hsl(0, 100%, 100%);
 
   /* image backgroud */
-  --background-image-mobile: url('./assets/bg-sidebar-mobile.svg');
-  --background-image-desktop: url('./assets/bg-sidebar-desktop.svg');
-  --background-image-check: url('./assets/icon-checkmark.svg');
+  --background-image-mobile: url("./assets/bg-sidebar-mobile.svg");
+  --background-image-desktop: url("./assets/bg-sidebar-desktop.svg");
+  --background-image-check: url("./assets/icon-checkmark.svg");
 
   /* font family */
-  --font-ubun: 'Ubuntu', sans-serif;
+  --font-ubun: "Ubuntu", sans-serif;
+  
 
   /* break points */
-  --breakpoint-xsm:425px;
-  --breakpoint-xxsm:375px;
+  --breakpoint-xsm: 425px;
+  --breakpoint-xxsm: 375px;
 }
 
+ 
 
-.tst{
-  font-family: 'Ubuntu', sans-serif;
-  background-image: url('./assets/icon-checkmark.svg');
-}
+ 

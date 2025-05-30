@@ -2,7 +2,7 @@ import AddOnCheckBox from "./AddOnCheckBox";
 
 const AddOns = () => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 md:space-y-6">
       <AddOnCheckBox
         isChecked={true}
         title="Online service"

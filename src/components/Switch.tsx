@@ -10,9 +10,7 @@ const Switch = ({ isOn, getSwitchValue }: SwitchProps) => {
   return (
     <div
       onClick={switchHandler}
-      className={`bg-blue-900 w-11 rounded-full cursor-pointer
-         flex items-center 
-        `}
+      className='bg-blue-900 w-11 rounded-full cursor-pointer flex items-center'
     >
       <div
         className={`bg-white w-4 h-4 rounded-full m-1 

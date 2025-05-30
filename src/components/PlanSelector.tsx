@@ -11,7 +11,7 @@ const PlanSelector = () => {
     setPlan(title.toLowerCase());
   };
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-4 ">
       <PlanOption
         onSelectPlan={onSelectPlanHandler}
         image={arcade_img}

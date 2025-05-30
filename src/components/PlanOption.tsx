@@ -19,7 +19,7 @@ const PlanOption = ({
   return (
     <div
       onClick={() => onSelectPlan(title)}
-      className={`flex items-center gap-4 border border-grey-500 rounded-lg p-3
+      className={`p-3 md:px-4 md:py-8 flex items-center gap-4 md:flex-col md:items-start border border-grey-500 cursor-pointer rounded-lg 
   ${isSelected && "border-purple-600 bg-blue-100"}`}
     >
       <img src={image} />
