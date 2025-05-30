@@ -11,7 +11,7 @@ import ThankYouCard from "./components/ThankYouCard";
 function App() {
   return (
     <div
-      className="h-screen py-8 px-4 font-ubun bg-blue-200 bg-mobile bg-contain bg-center-top bg-no-repeat
+      className="h-screen py-8 px-4 font-ubun bg-blue-400/40 bg-mobile bg-contain bg-center-top bg-no-repeat
     md:bg-none md:flex md:items-center justify-center "
     >
       <MobileSteps />
