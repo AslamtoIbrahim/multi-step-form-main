@@ -3,7 +3,7 @@ import arcade_img from "../assets/icon-arcade.svg";
 import advanced_img from "../assets/icon-advanced.svg";
 import pro_img from "../assets/icon-pro.svg";
 import { useState } from "react";
-import { ADVANCE_PLAN, ARCADE_PLAN, PRO_PLAN } from "../lib/keys";
+import { ADVANCE_PLAN, ARCADE_PLAN, PRO_PLAN } from "../utils/keys";
 
 const PlanSelector = () => {
   const [plan, setPlan] = useState("arcade");

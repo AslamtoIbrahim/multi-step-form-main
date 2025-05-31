@@ -5,9 +5,9 @@ import PhoneInput from "./PhoneInput";
 const Forms = () => {
   return (
     <div className="space-y-4">
-      <NameInput value="" />
-      <EmailInput value="" />
-      <PhoneInput value="" />
+      <NameInput />
+      <EmailInput />
+      <PhoneInput />
     </div>
   );
 };
