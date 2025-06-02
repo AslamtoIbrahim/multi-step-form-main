@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useSelector } from "react-redux";
+import type { RootState } from "../store/storeSteps";
+import { clcPrice } from "../utils/calculates";
 
 type OptionProps = {
   image: string;
@@ -15,7 +17,8 @@ const PlanOption = ({
   isSelected,
   onSelectPlan,
 }: OptionProps) => {
-  const [isMonthlyBilling, setMonthlyBilling] = useState(true);
+  const isMonthly = useSelector((state: RootState) => state.isMonthly);
+  const value = clcPrice(isMonthly) * price;
   return (
     <div
       onClick={() => onSelectPlan(title)}
@@ -26,9 +29,9 @@ const PlanOption = ({
       <section>
         <p className="font-semibold">{title}</p>
         <p className="text-grey-500">
-          ${price}/{isMonthlyBilling ? "mo" : "yr"}
+          ${value}/{isMonthly ? "mo" : "yr"}
         </p>
-        {!isMonthlyBilling && <p>2 months free</p>}
+        {!isMonthly && <p>2 months free</p>}
       </section>
     </div>
   );

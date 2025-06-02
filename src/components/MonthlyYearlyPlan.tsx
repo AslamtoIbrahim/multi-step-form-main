@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { switchBill } from "../store/sliceSteps";
+import type { RootState } from "../store/storeSteps";
 import Switch from "./Switch";
 
 const MonthlyYearlyPlan = () => {
-  const [isMonthly, setisMonthly] = useState(true);
+  // const [isMonthly, setisMonthly] = useState(true);
+  const isMonthly = useSelector((state: RootState) => state.isMonthly);
+  const dispacth = useDispatch();
   const switchHandler = (isOn: boolean) => {
-    setisMonthly(!isOn);
+    dispacth(switchBill(!isOn));
   };
   return (
     <div

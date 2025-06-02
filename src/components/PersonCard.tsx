@@ -1,4 +1,4 @@
-import NextCardStep1 from "./BackNextCard";
+import NextCardStep1 from "./NextCardStep1";
 import Forms from "./Forms";
 
 const PersonCard = () => {

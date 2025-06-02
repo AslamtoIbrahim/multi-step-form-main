@@ -3,9 +3,9 @@ import {
   validateEmail,
   validateName,
   validatePhone,
-} from "../store/sliceSteps";
-import type { AppDispatch } from "../store/storeSteps";
-import type { Person } from "./types";
+} from "./sliceSteps";
+import type { AppDispatch } from "./storeSteps";
+import type { Person } from "../utils/types";
 const passName = (name: string, dispatch: AppDispatch) => {
   if (name.length < 3) {
     dispatch(validateName(false));

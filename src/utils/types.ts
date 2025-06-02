@@ -10,3 +10,8 @@ export type Person = {
   phone: string;
   invalidPhone: boolean;
 };
+export type AddOns = {
+  onlineService: boolean;
+  largerStorage: boolean;
+  customizableProfile: boolean;
+};

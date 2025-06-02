@@ -1,10 +1,14 @@
-import { useState, type ChangeEvent } from "react";
+import { type ChangeEvent } from "react";
+import { useSelector } from "react-redux";
+import type { RootState } from "../store/storeSteps";
+import { clcPrice } from "../utils/calculates";
 
 type CheckBoxProps = {
   isChecked: boolean;
   title: string;
   descriptin: string;
   value: number;
+  setOnCheckBox: (check: boolean) => void;
 };
 
 const AddOnCheckBox = ({
@@ -12,16 +16,18 @@ const AddOnCheckBox = ({
   title,
   descriptin,
   value,
+  setOnCheckBox,
 }: CheckBoxProps) => {
-  const [bill, setbill] = useState("mo");
-  const [check, setcheck] = useState(isChecked);
+  const isMonthly = useSelector((state: RootState) => state.isMonthly);
+  const price = clcPrice(isMonthly) * value;
+
   const onChangeChekHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    setcheck(e.target.checked);
+    setOnCheckBox(e.target.checked);
   };
   return (
     <label
       className={`flex items-center justify-between gap-2  border border-gray-300 rounded-lg p-3 md:p-4 cursor-pointer
-      ${check && "bg-blue-100 border-purple-600"}`}
+      ${isChecked && "bg-blue-100 border-purple-600"}`}
       htmlFor={title}
     >
       <div className="flex items-center gap-2 md:gap-4">
@@ -31,17 +37,21 @@ const AddOnCheckBox = ({
           type="checkbox"
           name="checkbox"
           id={title}
-          checked={check}
+          checked={isChecked}
           onChange={onChangeChekHandler}
         />
 
         <section>
-          <p className="font-semibold text-[12px] xxsm:text-sm md:text-lg">{title}</p>
-          <p className="text-gray-400 text-[11px] xxsm:text-sm md:text-base">{descriptin}</p>
+          <p className="font-semibold text-[12px] xxsm:text-sm md:text-lg">
+            {title}
+          </p>
+          <p className="text-gray-400 text-[11px] xxsm:text-sm md:text-base">
+            {descriptin}
+          </p>
         </section>
       </div>
       <p className="text-purple-600 text-sm">
-        +${value}/{bill}
+        +${price}/{isMonthly ? "mo" : "yr"}
       </p>
     </label>
   );
