@@ -22,7 +22,7 @@ function App() {
     md:bg-none  flex flex-col  md:items-center md:justify-center "
     >
       <MobileSteps />
-      <div className="bg-white mx-4  rounded-lg md:rounded-xl p-5 md:max-w-11/12 xl:max-w-1/2 md:flex md:h-[41.5rem] ">
+      <div className="bg-white mx-4  rounded-lg md:rounded-xl p-5 md:w-[95%] xl:max-w-1/2 md:flex md:h-[41.5rem] ">
         <DesktopSteps />
         <section className="md:flex-1 md:mt-4 md:px-12">
           {step === STEP_1 && <PersonCard />}
@@ -32,7 +32,8 @@ function App() {
           {step === STEP_5 && <ThankYouCard />}
         </section>
       </div>
-      <section className="mt-auto p-2 bg-white md:hidden">
+      {/* next back sect for mobile devices */}
+      <section className="mt-auto p-2 bg-white md:hidden empty:hidden">
           {step === STEP_1 && <NextCardStep1 />}
           {step === STEP_2 && <NextCardStep2 />}
           {step === STEP_3 && <NextCardStep3 />}
