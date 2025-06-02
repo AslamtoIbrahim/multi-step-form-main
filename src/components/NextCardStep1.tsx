@@ -10,7 +10,7 @@ const NextCardStep1 = () => {
     passPerson(person, dispatch);
   };
   return (
-    <div className="hidden md:flex justify-end items-center">
+    <div className="flex justify-end items-center">
       <NextButton onClick={onClickNextButton} />
     </div>
   );

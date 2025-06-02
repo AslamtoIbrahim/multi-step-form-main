@@ -13,7 +13,7 @@ const LastCardStep4 = () => {
     dispatch(setStep(3));
   };
   return (
-    <div className="hidden md:flex justify-between items-center">
+    <div className="flex justify-between items-center">
       <BackButton onClick={onClickBackButton} />
       <NextButton text="Confirm" onClick={onClickNextButton} style="bg-purple-600" />
     </div>

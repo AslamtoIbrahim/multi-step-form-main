@@ -30,7 +30,9 @@ const FinishingCard = () => {
           </p>
         </section>
       </div>
-      <LastCardStep4 />
+      <section className="hidden md:block">
+        <LastCardStep4 />
+      </section>
     </div>
   );
 };

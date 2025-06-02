@@ -15,7 +15,9 @@ const PlanCard = () => {
         <PlanSelector />
         <MonthlyYearlyPlan />
       </section>
-      <NextCardStep2 />
+      <section className="hidden md:block">
+        <NextCardStep2 />
+      </section>
     </div>
   );
 };

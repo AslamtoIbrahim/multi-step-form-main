@@ -13,7 +13,9 @@ const PersonCard = () => {
         </p>
         <Forms />
       </section>
-      <NextCardStep1 />
+      <section className="hidden md:block">
+        <NextCardStep1 />
+      </section>
     </div>
   );
 };

@@ -13,7 +13,9 @@ const PickCard = () => {
         </p>
         <AddOns />
       </section>
-      <NextCardStep3 />
+      <section className="hidden md:block">
+        <NextCardStep3 />
+      </section>
     </div>
   );
 };
