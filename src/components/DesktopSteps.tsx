@@ -1,11 +1,16 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import DeskButtonStep from "./DeskButtonStep";
 import { setStep } from "../store/sliceSteps";
+import type { RootState } from "../store/storeSteps";
 
 const DesktopSteps = () => {
+  const maxStep = useSelector((state: RootState) => state.maxStep);
   const dispatch = useDispatch();
   const onClickStepButton = (value: number) => {
-    dispatch(setStep(value));
+    console.log("maxStep: ", maxStep);
+    if (maxStep >= value) {
+      dispatch(setStep(value));
+    }
   };
   return (
     <div
@@ -16,21 +21,25 @@ const DesktopSteps = () => {
         onClickStep={onClickStepButton}
         text="Your info"
         value={1}
+        enabled={maxStep >= 1}
       />
       <DeskButtonStep
         onClickStep={onClickStepButton}
         text="Select plan"
         value={2}
+        enabled={maxStep >= 2}
       />
       <DeskButtonStep
         onClickStep={onClickStepButton}
         text="Add-ons"
         value={3}
+        enabled={maxStep >= 3}
       />
       <DeskButtonStep
         onClickStep={onClickStepButton}
         text="Summary"
         value={4}
+        enabled={maxStep >= 4}
       />
     </div>
   );

@@ -27,7 +27,7 @@ const stepSlice = createSlice({
       state.step = action.payload;
     },
     setMaxStep: (state, action: PayloadAction<number>) => {
-      state.step = action.payload;
+      state.maxStep = action.payload;
     },
     addName: (state, action: PayloadAction<string>) => {
       state.person.name = action.payload;

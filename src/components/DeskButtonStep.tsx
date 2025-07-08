@@ -4,13 +4,14 @@ type StepProps = {
   text: string;
   value: number;
   onClickStep: (value: number) => void;
+  enabled: boolean;
 };
 
-const DeskButtonStep = ({ text, value, onClickStep }: StepProps) => {
+const DeskButtonStep = ({ text, value, onClickStep, enabled }: StepProps) => {
   return (
     <div
       onClick={() => onClickStep(value)}
-      className="flex items-center gap-4 p-2  cursor-pointer rounded hover:bg-purple-200/5 "
+      className={`flex items-center gap-4 p-2  rounded ${enabled && "hover:bg-purple-200/10 cursor-pointer"}`}
     >
       <StepButton value={value} />
       <section>
