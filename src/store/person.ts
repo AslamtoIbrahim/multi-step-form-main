@@ -1,4 +1,5 @@
 import {
+  setMaxStep,
   setStep,
   validateEmail,
   validateName,

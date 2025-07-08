@@ -8,7 +8,7 @@ const StepButton = ({ value }: props) => {
   const colored = step === value;
   return (
     <button
-      className={`w-10 h-10  border border-blue-200 rounded-full 
+      className={`w-10 h-10  border border-blue-200 rounded-full md:shrink-0
     ${colored ? "bg-cyan-200 text-black" : "text-white"}`}
     >
       {value}
