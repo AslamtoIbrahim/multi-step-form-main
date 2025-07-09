@@ -1,3 +1,4 @@
+import type { State } from "../utils/types";
 import {
   setMaxStep,
   setStep,
