@@ -18,7 +18,7 @@ function App() {
   const step = useSelector((state: RootState) => state.step);
   return (
     <div
-      className="h-screen pt-4 md:py-8 font-ubun bg-blue-400/40 bg-mobile bg-contain bg-center-top bg-no-repeat
+      className="h-full pt-4 md:py-8 font-ubun bg-blue-400/40 bg-mobile bg-contain bg-center-top bg-no-repeat
     md:bg-none  flex flex-col  md:items-center md:justify-center "
     >
       <MobileSteps />
@@ -34,10 +34,10 @@ function App() {
       </div>
       {/* next back sect for mobile devices */}
       <section className="mt-auto p-2 bg-white md:hidden empty:hidden">
-          {step === STEP_1 && <NextCardStep1 />}
-          {step === STEP_2 && <NextCardStep2 />}
-          {step === STEP_3 && <NextCardStep3 />}
-          {step === STEP_4 && <LastCardStep4 />}
+        {step === STEP_1 && <NextCardStep1 />}
+        {step === STEP_2 && <NextCardStep2 />}
+        {step === STEP_3 && <NextCardStep3 />}
+        {step === STEP_4 && <LastCardStep4 />}
       </section>
     </div>
   );
