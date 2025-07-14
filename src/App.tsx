@@ -18,7 +18,7 @@ function App() {
   const step = useSelector((state: RootState) => state.step);
   return (
     <div
-      className="h-full pt-4 md:py-8 font-ubun bg-blue-400/40 bg-mobile bg-contain bg-center-top bg-no-repeat
+      className="h-screen pt-4 md:py-8 font-ubun bg-blue-400/40 bg-mobile bg-contain bg-center-top bg-no-repeat
     md:bg-none  flex flex-col  md:items-center md:justify-center "
     >
       <MobileSteps />

@@ -22,12 +22,12 @@ const PlanOption = ({
   return (
     <div
       onClick={() => onSelectPlan(title)}
-      className={`p-3 md:px-4 md:py-8 flex items-center gap-4 md:flex-col md:items-start border border-grey-500 cursor-pointer rounded-lg 
+      className={`p-3 md:px-8 md:py-10 flex items-center gap-4 md:flex-col md:items-start border border-grey-500 cursor-pointer rounded-lg 
   ${isSelected && "border-purple-600 bg-blue-100"}`}
     >
       <img src={image} />
       <section>
-        <p className="font-semibold">{title}</p>
+        <p className="font-semibold md:text-lg">{title}</p>
         <p className="text-grey-500">
           ${value}/{isMonthly ? "mo" : "yr"}
         </p>
