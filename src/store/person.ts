@@ -36,7 +36,7 @@ const passPhone = (phone: string, dispatch: AppDispatch) => {
 };
 
 export const passPerson = (state: State, dispatch: AppDispatch) => {
-  const validName = passName(state.person.name, dispatch);
+  const validName = passName(state.person.name.trim(), dispatch);
   const validEmail = passEmail(state.person.eamil, dispatch);
   const validPone = passPhone(state.person.phone, dispatch);
   if (validName && validEmail && validPone) {
