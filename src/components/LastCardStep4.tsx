@@ -1,13 +1,14 @@
 import { useDispatch } from "react-redux";
-import { setStep } from "../store/sliceSteps";
+import { setMaxStep, setStep } from "../store/sliceSteps";
 import BackButton from "./BackButton";
 import NextButton from "./NextButton";
 
 const LastCardStep4 = () => {
- const dispatch = useDispatch();
-  
+  const dispatch = useDispatch();
+
   const onClickNextButton = () => {
     dispatch(setStep(5));
+    dispatch(setMaxStep(0));
   };
   const onClickBackButton = () => {
     dispatch(setStep(3));
@@ -15,9 +16,13 @@ const LastCardStep4 = () => {
   return (
     <div className="flex justify-between items-center">
       <BackButton onClick={onClickBackButton} />
-      <NextButton text="Confirm" onClick={onClickNextButton} style="bg-purple-600" />
+      <NextButton
+        text="Confirm"
+        onClick={onClickNextButton}
+        style="bg-purple-600"
+      />
     </div>
   );
-}
+};
 
-export default LastCardStep4
+export default LastCardStep4;

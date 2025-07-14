@@ -4,10 +4,10 @@ import { passPerson } from "../store/person";
 import NextButton from "./NextButton";
 
 const NextCardStep1 = () => {
-  const person = useSelector((state: RootState) => state.person);
+  const state = useSelector((state: RootState) => state);
   const dispatch = useDispatch();
   const onClickNextButton = () => {
-    passPerson(person, dispatch);
+    passPerson(state, dispatch);
   };
   return (
     <div className="flex justify-end items-center">

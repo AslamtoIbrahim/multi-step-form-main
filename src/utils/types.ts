@@ -15,3 +15,12 @@ export type AddOns = {
   largerStorage: boolean;
   customizableProfile: boolean;
 };
+
+export type State = {
+  step: number;
+  maxStep: number;
+  person: Person;
+  plan: string;
+  isMonthly: boolean;
+  addOns: AddOns;
+};

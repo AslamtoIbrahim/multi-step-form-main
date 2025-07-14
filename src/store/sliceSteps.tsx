@@ -5,6 +5,7 @@ const stepSlice = createSlice({
   name: "Steps",
   initialState: {
     step: 1,
+    maxStep: 1,
     person: {
       name: "",
       invalidName: true,
@@ -24,6 +25,9 @@ const stepSlice = createSlice({
   reducers: {
     setStep: (state, action: PayloadAction<number>) => {
       state.step = action.payload;
+    },
+    setMaxStep: (state, action: PayloadAction<number>) => {
+      state.maxStep = action.payload;
     },
     addName: (state, action: PayloadAction<string>) => {
       state.person.name = action.payload;
@@ -63,6 +67,7 @@ const stepSlice = createSlice({
 
 export const {
   setStep,
+  setMaxStep,
   addName,
   validateName,
   addEmail,
