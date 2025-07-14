@@ -26,7 +26,7 @@ const AddOnCheckBox = ({
   };
   return (
     <label
-      className={`flex items-center justify-between gap-2  border border-gray-300 rounded-lg p-3 md:p-4 cursor-pointer
+      className={`flex items-center justify-between gap-2  border border-gray-300 rounded-lg p-3 md:p-6 cursor-pointer
       ${isChecked && "bg-blue-100 border-purple-600"}`}
       htmlFor={title}
     >
